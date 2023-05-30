@@ -629,6 +629,25 @@ declare module "noblox.js" {
         productId: string
     }
 
+    interface DeveloperProductInfo {
+        id: number,
+        creatorId: number,
+        assetTypeId: number,
+        productTypeId: boolean,
+        isNew: boolean,
+        isForSale: boolean,
+        priceInRobux: number,
+        premiumPriceInRobux: nnumber,
+        robloxProductId: number,
+        targetId: number,
+        created: Date,
+        updated: Date,
+        assetCategories: number,
+        assetGenres: number,
+        affiliateFeePercentage: number,
+        isPublicDomain: boolean
+    }
+
     interface CheckDeveloperProductNameResult {
         Success: boolean;
         /**
@@ -1823,6 +1842,11 @@ declare module "noblox.js" {
      * 🔐 Returns the existing developer products in a specified game.
      */
     function getDeveloperProducts(placeId: number, page: number, jar?: CookieJar): Promise<DeveloperProductsResult>;
+
+    /**
+     * 🔐 Get a developer product info for the authenticated user.
+     */
+    function getDeveloperProductInfo(productId: number, jar?: CookieJar): Promise<DeveloperProductInfo>;
 
     /**
      * 🔐 Returns data about the existing game instances (servers) of the specified place. You must have permission to view the game's server list to use this. (Must be logged in)
