@@ -1693,6 +1693,11 @@ declare module "noblox.js" {
     function configureItem(id: number, name: string, description: string, enableComments?: boolean, sellForRobux?: boolean, genreSelection?: number, jar?: CookieJar): Promise<ConfigureItemResponse>;
 
     /**
+     * 🔐 Gets a list of universes for the authenticated user.
+     */
+    function getUniverses(isArchived?: boolean, limit?: number, sortOrder?: SortOrder, jar?: CookieJar): Promise<Array<UniverseInformation>>
+
+    /**
      * 🔐 Modifies a universe's settings
      */
     function updateUniverse(universeId: number, settings: UniverseSettings, jar?: CookieJar): Promise<UpdateUniverseResponse>;
