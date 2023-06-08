@@ -2046,6 +2046,11 @@ declare module "noblox.js" {
     function getItemsDetails(items: object[], jar?: CookieJar): Promise<any[]>;
 
     /**
+     * 🔓 Get resellable instances.
+     */
+    function getResellableInstances(collectibleItemId: string, ownerId: number, jar?: CookieJar): Promise<any[]>;
+
+    /**
      * ✅ Returns whether a user owns an asset or not
      */
     function getOwnership(userId: number, itemTargetId: number, itemType?: "Asset" | "GamePass" | "Badge" | "Bundle"): Promise<boolean>;
