@@ -2041,6 +2041,11 @@ declare module "noblox.js" {
     function getInventoryById(userId: number, assetTypeId: number, sortOrder?: SortOrder, limit?: number, jar?: CookieJar): Promise<InventoryEntry[]>;
 
     /**
+     * 🔓 Get items details under the current user.
+     */
+    function getItemsDetails(items: object[], jar?: CookieJar): Promise<any[]>;
+
+    /**
      * ✅ Returns whether a user owns an asset or not
      */
     function getOwnership(userId: number, itemTargetId: number, itemType?: "Asset" | "GamePass" | "Badge" | "Bundle"): Promise<boolean>;
