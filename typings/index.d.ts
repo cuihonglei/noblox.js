@@ -2051,6 +2051,11 @@ declare module "noblox.js" {
     function getResellableInstances(collectibleItemId: string, ownerId: number, jar?: CookieJar): Promise<any[]>;
 
     /**
+     * 🔓 Buy limiteds.
+     */
+    function buyLimiteds(collectibleItemId: string, collectibleItemInstanceId: string, collectibleProductId: string, expectedCurrency: number, expectedPrice: number, expectedPurchaserId: number, expectedSellerId: number, jar?: CookieJar): Promise<object>;
+
+    /**
      * ✅ Returns whether a user owns an asset or not
      */
     function getOwnership(userId: number, itemTargetId: number, itemType?: "Asset" | "GamePass" | "Badge" | "Bundle"): Promise<boolean>;
